@@ -1,12 +1,8 @@
 {
-  "name": "tymer",
+  "name": "@watchmen/tymer",
   "version": "1.2.1",
   "description": "simple event timer",
   "main": "dist/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tony-kerz/tymer.git"
-  },
   "scripts": {
     "ava": "DEBUG=app:* ava ./ava",
     "test": "npm run ava",
@@ -16,17 +12,23 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "debug": "^2.6.4"
+    "debug": "^3.1.0"
   },
   "devDependencies": {
-    "ava": "^0.19.1",
+    "ava": "^0.23.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
-    "babel-eslint": "^7.2.3",
+    "babel-eslint": "^8.0.2",
     "babel-preset-env": "^1.4.0",
-    "babel-preset-es2015": "^6.6.0",
     "babel-preset-stage-0": "^6.5.0",
-    "eslint": "^3.19.0"
+    "eslint": "^4.11.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "prettier": "^1.7.4",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "useEslintrc": true
   },
   "ava": {
     "babel": "inherit",
@@ -34,5 +36,8 @@
       "babel-register",
       "babel-polyfill"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
