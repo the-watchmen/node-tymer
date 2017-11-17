@@ -1,6 +1,6 @@
 {
   "name": "@watchmen/tymer",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "simple event timer",
   "main": "dist/index.js",
   "scripts": {
@@ -32,7 +32,10 @@
   },
   "ava": {
     "babel": "inherit",
-    "require": ["babel-register", "babel-polyfill"]
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ]
   },
   "publishConfig": {
     "access": "public"
