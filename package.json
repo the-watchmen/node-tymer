@@ -1,6 +1,6 @@
 {
   "name": "@watchmen/tymer",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "simple event timer",
   "main": "dist/index.js",
   "scripts": {
@@ -21,7 +21,6 @@
     "@babel/preset-env": "^7.4.4",
     "@babel/register": "^7.4.4",
     "ava": "^1.4.1",
-    "prettier": "^1.17.1",
     "xo": "^0.24.0"
   },
   "ava": {
