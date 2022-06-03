@@ -1,7 +1,7 @@
 import test from 'ava'
 import Timer from '../../src'
 
-test('timer: should track laps', t => {
+test('timer: should track laps', (t) => {
 	const timer = new Timer('some-event')
 	timer.lap()
 	timer.lap()
@@ -10,7 +10,7 @@ test('timer: should track laps', t => {
 	console.log(timer.toString())
 })
 
-test('timer: none', t => {
+test('timer: none', (t) => {
 	const timer = new Timer('some-event')
 	t.is(timer.count(), 0)
 	t.is(timer.last(), undefined)
@@ -22,7 +22,7 @@ test('timer: none', t => {
 	t.is(timer.total(), 0)
 })
 
-test('timer: one', t => {
+test('timer: one', (t) => {
 	const timer = new Timer('some-event')
 	timer.record(1000)
 	t.is(timer.count(), 1)
@@ -35,7 +35,7 @@ test('timer: one', t => {
 	t.is(timer.total(), 1000)
 })
 
-test('timer: two', t => {
+test('timer: two', (t) => {
 	const timer = new Timer('some-event')
 	timer.record(3000)
 	timer.record(1000)
@@ -49,7 +49,7 @@ test('timer: two', t => {
 	t.is(timer.total(), 4000)
 })
 
-test('timer: three', t => {
+test('timer: three', (t) => {
 	const timer = new Timer('some-event')
 	timer.record(6000)
 	timer.record(2000)
@@ -61,11 +61,11 @@ test('timer: three', t => {
 	t.is(timer.max2(), 4000)
 	t.is(timer.avg(), 4000)
 	t.is(timer.avg2(), 3000)
-	t.is(timer.total(), 12000)
+	t.is(timer.total(), 12_000)
 	t.is(timer.metrics().count, 3)
 })
 
-test('timer: should record with parent', t => {
+test('timer: should record with parent', (t) => {
 	const timer = new Timer('some-event')
 	for (let i = 0; i < 10; i++) {
 		const child = new Timer()

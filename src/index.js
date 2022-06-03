@@ -1,9 +1,6 @@
 import _ from 'lodash'
-// Import debug from 'debug'
 
-// const dbg = debug('app:tymer')
-
-export default class {
+export default class Tymer {
 	constructor(name) {
 		this._name = name
 		this._count = 0
@@ -65,7 +62,9 @@ export default class {
 	}
 
 	avg2() {
-		return this._count ? (this._total - this._max) / (this._count - 1) : NaN
+		return this._count
+			? (this._total - this._max) / (this._count - 1)
+			: Number.NaN
 	}
 
 	count() {
@@ -85,11 +84,13 @@ export default class {
 	}
 
 	toString() {
-		return `${this._name}: count=${this._count}, min=${format(this._min)}, max=${format(
-			this._max
-		)}, max2=${format(this._max2)}, last=${format(this._last)}, avg=${format(
-			this.avg()
-		)}, avg2=${format(this.avg2())}, total=${format(this._total / 1000)}s`
+		return `${this._name}: count=${this._count}, min=${format(
+			this._min,
+		)}, max=${format(this._max)}, max2=${format(this._max2)}, last=${format(
+			this._last,
+		)}, avg=${format(this.avg())}, avg2=${format(this.avg2())}, total=${format(
+			this._total / 1000,
+		)}s`
 	}
 
 	isThresh(thresh) {
@@ -106,7 +107,7 @@ export default class {
 			last: this.last(),
 			avg: this.avg(),
 			avg2: this.avg2(),
-			total: this.total()
+			total: this.total(),
 		}
 	}
 }
