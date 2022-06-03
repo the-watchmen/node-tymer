@@ -16,7 +16,9 @@ jobs:
         with:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org"
-      - run: npm ci
-      - run: npm publish
+      #- run: npm ci
+      #- run: npm publish
+      - run: yarn install --immutable --immutable-cache
+      - run: yarn npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
