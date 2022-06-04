@@ -11,28 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
         with:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org"
-      # https://github.com/actions/setup-node/issues/488
-      #
-      #- name: get-yarn-cache-folder
-      #  id: yarn-cache-dir-path
-      #  run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-      #  shell: bash
-      #  working-directory: tooling
-      #- name: restore-yarn-cache
-      #  uses: actions/cache@v3
-      #  with:
-      #    path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-      #    key: yarn-cache-folder-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
-      #    restore-keys: |
-      #      yarn-cache-folder-
-      #- run: npm ci
-      #- run: npm publish
       - run: yarn install --immutable
-      - run: yarn publish
+      - run: yarn npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
