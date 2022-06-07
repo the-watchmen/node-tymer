@@ -1,7 +1,4 @@
 name: npm-publish
-#on:
-#  release:
-#    types: [created]
 on:
   push:
     branches:
@@ -16,18 +13,8 @@ jobs:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org"
           cache: yarn
-      # https://github.com/actions/setup-node/issues/488
-      #- name: yarn-cache-dir-path
-      #  id: yarn-cache-dir-path
-      #  run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-      #- uses: actions/cache@v3
-      #  id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-      #  with:
-      #    path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-      #    key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
-      #    restore-keys: |
-      #      ${{ runner.os }}-yarn-
       - run: yarn install --immutable
+      - run: yarn test
       - run: yarn npm publish
         env:
           #NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
