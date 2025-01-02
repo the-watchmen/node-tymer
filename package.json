@@ -8,7 +8,10 @@
     "ava": "ava",
     "test": "xo && npx ava"
   },
-  "repository": "the-watchmen/node-tymer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-watchmen/node-tymer.git"
+  },
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.21"
