@@ -5,8 +5,7 @@
   "type": "module",
   "exports": "./index.js",
   "scripts": {
-    "ava": "ava",
-    "test": "xo && npx ava"
+    "test": "xo && ava"
   },
   "repository": {
     "type": "git",
