@@ -1,5 +1,5 @@
 import test from 'ava'
-import Timer from '../../src'
+import Timer from '../../src/index.js'
 
 test('timer: should track laps', (t) => {
 	const timer = new Timer('some-event')
