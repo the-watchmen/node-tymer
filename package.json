@@ -1,6 +1,6 @@
 {
   "name": "@watchmen/tymer",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "description": "simple event timer",
   "type": "module",
   "exports": "./index.js",
