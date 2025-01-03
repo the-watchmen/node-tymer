@@ -3,9 +3,10 @@
   "version": "2.0.12",
   "description": "simple event timer",
   "type": "module",
-  "exports": "./index.js",
+  "exports": "./src/index.js",
   "scripts": {
-    "test": "xo && ava"
+    "pretest": "xo",
+    "test": "ava"
   },
   "repository": {
     "type": "git",

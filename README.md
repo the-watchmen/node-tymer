@@ -5,11 +5,11 @@ time stuff
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![build status](https://github.com/the-watchmen/node-tymer/actions/workflows/release.yaml/badge.svg)](https://github.com/the-watchmen/node-tymer/actions)
-[![npm (scoped)](https://img.shields.io/npm/v/@watchmen/tymer.svg)](https://img.shields.io/npm/v/@watchmen/tymer.svg)
+[![npm (scoped)](https://img.shields.io/npm/v/@watchmen/tymer.svg)](https://www.npmjs.com/package/@watchmen/tymer)
 
 ## usage
 
-- `npm i <package name>`
+- `npm i @watchmen/tymer`
 
 ### import
 
